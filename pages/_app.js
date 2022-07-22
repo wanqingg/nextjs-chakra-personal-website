@@ -6,16 +6,13 @@ import {
 import customTheme from "../styles/theme";
 import { Global, css } from "@emotion/react";
 
-import "../styles/globals.css";
-
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode();
 
   return (
     <>
-      <Global>
-        styles=
-        {css`
+      <Global
+        styles={css`
           ::selection {
             background-color: #90cdf4;
             color: #fefefe;
@@ -35,7 +32,7 @@ const GlobalStyle = ({ children }) => {
             background: ${colorMode === "light" ? "white" : "#171717"};
           }
         `}
-      </Global>
+      />
       {children}
     </>
   );

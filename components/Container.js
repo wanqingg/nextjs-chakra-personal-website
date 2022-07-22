@@ -13,14 +13,14 @@ const Container = ({ children }) => {
     dark: "#171717",
   };
 
-  const navHoverBg = {
-    light: "gray.600",
-    dark: "gray.300",
-  };
-
   const color = {
     light: "black",
     dark: "white",
+  };
+
+  const navHoverBg = {
+    light: "gray.600",
+    dark: "gray.300",
   };
 
   const StickyNav = styled(Flex)`
@@ -28,7 +28,7 @@ const Container = ({ children }) => {
     z-index: 10;
     top: 0;
     backdrop-filter: saturate(180%) blur(20px);
-    transition: height: .5s, line-height .5s;
+    transition: height 0.5s, line-height 0.5s;
   `;
 
   return (
@@ -45,7 +45,7 @@ const Container = ({ children }) => {
         px={[2, 6, 6]}
         py={2}
         mt={8}
-        mb={[0, 0, 1]}
+        mb={[0, 0, 8]}
         mx='auto'
       >
         <Box>
