@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useColorMode, Flex, Box, Button } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 
+import Sidebar from "../components/Sidebar";
 import DarkModeSwitch from "./DarkModeSwitch";
 
 const Container = ({ children }) => {
@@ -33,6 +34,7 @@ const Container = ({ children }) => {
 
   return (
     <>
+      <Sidebar />
       <StickyNav
         flexDirection='row'
         justifyContent='space-between'
