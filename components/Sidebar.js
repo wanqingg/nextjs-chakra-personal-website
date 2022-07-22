@@ -7,7 +7,19 @@ import {
   IconButton,
   Text,
 } from "@chakra-ui/react/";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import {
+  FiMenu,
+  FiHome,
+  FiCalendar,
+  FiUser,
+  FiDollarSign,
+  FiBriefcase,
+  FiSettings,
+} from "react-icons/fi";
+import { IoPawOutline } from "react-icons/io5";
+
+import NavItem from "./NavItem";
+
 const Sidebar = () => {
   const [navSize, setNavSize] = useState("large");
   return (
@@ -35,7 +47,7 @@ const Sidebar = () => {
           background='none'
           mt={5}
           _hover={{ background: "none" }}
-          icon={<HamburgerIcon />}
+          icon={<FiMenu />}
           onClick={() => {
             if (navSize === "small") {
               setNavSize("large");
@@ -44,6 +56,18 @@ const Sidebar = () => {
             }
           }}
         />
+        <NavItem
+          navSize={navSize}
+          icon={FiHome}
+          title='Dashboard'
+          description='This is the description for the dashboard.'
+        />
+        <NavItem navSize={navSize} icon={FiCalendar} title='Calendar' active />
+        <NavItem navSize={navSize} icon={FiUser} title='Clients' />
+        <NavItem navSize={navSize} icon={IoPawOutline} title='Animals' />
+        <NavItem navSize={navSize} icon={FiDollarSign} title='Stocks' />
+        <NavItem navSize={navSize} icon={FiBriefcase} title='Reports' />
+        <NavItem navSize={navSize} icon={FiSettings} title='Settings' />
       </Flex>
       <Flex
         p='5%'
